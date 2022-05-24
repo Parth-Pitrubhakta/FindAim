@@ -10,9 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindAim">
         <activity
-            android:name=".LoginPage"
-            android:theme="@style/AppTheme.NotFullScreen"
+            android:name=".ForgotPasswordPage"
             android:exported="false" />
+        <activity
+            android:name=".RegisterPage"
+            android:exported="false"
+            android:theme="@style/AppTheme.NotFullScreen" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="false"
+            android:theme="@style/AppTheme.NotFullScreen" />
         <activity
             android:name=".splashscreen"
             android:exported="true"
@@ -25,7 +32,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
