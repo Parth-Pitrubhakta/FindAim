@@ -12,7 +12,7 @@ class splashscreen : AppCompatActivity() {
 
         val newsLogo = findViewById<ImageView>(R.id.IV_splashscreen)
         newsLogo.animate().setDuration(3000).alpha(1f).withEndAction {
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, LoginPage::class.java)
             startActivity(i)
             finish()
         }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/baloo_bhai</item>
+        <item>@font/cutive</item>
+        <item>@font/galdeano</item>
+        <item>@font/hammersmith_one</item>
+        <item>@font/montaga</item>
+        <item>@font/montserrat_alternates_light</item>
+    </array>
+</resources>
