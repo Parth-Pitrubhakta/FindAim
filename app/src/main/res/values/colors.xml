@@ -17,4 +17,5 @@
     <color name="orange">#FF7F00</color>
     <color name="red">#FF0000</color>
     <color name="dark_blue">#011325</color>
+    <color name="backgroundcolor">#F5F8FF</color>
 </resources>
