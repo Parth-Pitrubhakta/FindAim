@@ -11,6 +11,7 @@
         android:theme="@style/Theme.FindAim">
         <activity
             android:name=".ForgotPasswordPage"
+            android:theme="@style/AppTheme.NotFullScreen"
             android:exported="false" />
         <activity
             android:name=".RegisterPage"
