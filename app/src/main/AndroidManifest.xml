@@ -10,14 +10,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindAim">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".ForgotPasswordPage"
+            android:theme="@style/AppTheme.NotFullScreen"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterPage"
+            android:exported="false"
+            android:theme="@style/AppTheme.NotFullScreen" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="false"
+            android:theme="@style/AppTheme.NotFullScreen" />
+        <activity
+            android:name=".splashscreen"
+            android:exported="true"
+            android:theme="@style/AppTheme.NotFullScreen2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NotFullScreen"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
