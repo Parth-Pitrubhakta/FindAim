@@ -32,4 +32,12 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/white</item>
     </style>
+
+    <style name="AppTheme.NotFullScreen3" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/blazeorange</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/blazeorange</item>
+    </style>
 </resources>
