@@ -3,6 +3,8 @@ package com.example.findaim
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.ImageView
 
 class splashscreen : AppCompatActivity() {
@@ -10,11 +12,12 @@ class splashscreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
 
-        val newsLogo = findViewById<ImageView>(R.id.IV_splashscreen)
-        newsLogo.animate().setDuration(3000).alpha(1f).withEndAction {
-            val i = Intent(this, LoginPage::class.java)
-            startActivity(i)
-            finish()
-        }
+        Handler(Looper.getMainLooper()).postDelayed({
+                val homepageintent = Intent(this,LoginPage::class.java)
+                startActivity(homepageintent)
+                finish()
+
+        }, 2000)
+
     }
 }
