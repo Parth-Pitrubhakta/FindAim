@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageView2"
+            android:id="@+id/backbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -35,11 +35,12 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+            app:layout_constraintBottom_toBottomOf="@+id/backbutton"
+            app:layout_constraintStart_toEndOf="@+id/backbutton"
+            app:layout_constraintTop_toTopOf="@+id/backbutton" />
 
         <ImageButton
+            android:id="@+id/logout"
             android:layout_width="31dp"
             android:layout_height="32dp"
             android:layout_marginEnd="24dp"
@@ -52,40 +53,65 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/profilelogoimg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="500dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="25dp"
+                    app:cardCornerRadius="500dp">
+
+                    <ImageView
+                        android:id="@+id/profilephoto"
+                        android:src="@drawable/profilelogoimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/username_profilepg"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/galdeano"
-        android:text="Parth Pitrubhakta"
+        android:text="Username"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/userid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/galdeano"
-        android:text="@string/userid"
+        android:text="email"
         android:textColor="@color/teal_700"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/username_profilepg"
-        app:layout_constraintStart_toStartOf="@+id/username_profilepg"
-        app:layout_constraintTop_toBottomOf="@+id/username_profilepg" />
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -96,7 +122,7 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        app:layout_constraintTop_toBottomOf="@+id/userid">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -117,7 +143,7 @@
             android:layout_marginRight="5dp"
             android:background="@color/white"
             app:cardCornerRadius="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/userid">
 
             <TextView
                 android:id="@+id/editprofile"
@@ -140,7 +166,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/userid">
 
             <TextView
                 android:id="@+id/favorites"
@@ -162,7 +188,7 @@
             android:layout_marginRight="5dp"
             android:background="@color/white"
             app:cardCornerRadius="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/userid">
 
             <TextView
                 android:id="@+id/notifications"
@@ -184,7 +210,7 @@
             android:layout_marginRight="5dp"
             android:background="@color/white"
             app:cardCornerRadius="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/userid">
 
             <TextView
                 android:id="@+id/feedback"
@@ -207,7 +233,7 @@
             android:layout_marginBottom="10dp"
             android:background="@color/white"
             app:cardCornerRadius="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/userid">
 
             <TextView
                 android:id="@+id/contactus"
