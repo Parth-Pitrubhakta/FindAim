@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -65,9 +65,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/homepage_profilephoto"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="10dp"
         app:cardCornerRadius="500dp"
         android:background="@color/backgroundcolor"
         android:src="@drawable/profileimg"
