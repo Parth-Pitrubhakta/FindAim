@@ -43,6 +43,8 @@ class HomeFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
         val currentUser = firebaseAuth.currentUser
 
+        bindingHomeBinding.tvNameMainpg.text = currentUser?.displayName
+
         Glide.with(this).load(currentUser?.photoUrl).into(bindingHomeBinding.IbHomepageprofilephoto)
 
         bindingHomeBinding.IbHomepageprofilephoto.setOnClickListener{
