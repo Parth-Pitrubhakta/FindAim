@@ -3,18 +3,36 @@ package com.example.findaim
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.ImageView
+import com.google.firebase.auth.FirebaseAuth
 
 class splashscreen : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
 
-        val newsLogo = findViewById<ImageView>(R.id.IV_splashscreen)
-        newsLogo.animate().setDuration(3000).alpha(1f).withEndAction {
-            val i = Intent(this, LoginPage::class.java)
-            startActivity(i)
-            finish()
-        }
+        firebaseAuth = FirebaseAuth.getInstance()
+        val user = firebaseAuth.currentUser
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            /** If user is not authenticated, send him to signInPage to authenticate first.
+             * else send him to HomePage */
+            if (user != null){
+                val homepageintent = Intent(this,MainActivity::class.java)
+                startActivity(homepageintent)
+                finish()
+            }else{
+                val signInIntent = Intent(this, LoginPage::class.java)
+                startActivity(signInIntent)
+                finish()
+            }
+
+        }, 2000)
+
     }
 }
