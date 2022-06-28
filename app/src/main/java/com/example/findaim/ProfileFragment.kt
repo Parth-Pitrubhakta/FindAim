@@ -61,6 +61,14 @@ class ProfileFragment : Fragment() {
         bindingProfileBinding.userid.text = currentuser?.email
         Glide.with(this).load(currentuser?.photoUrl).into(bindingProfileBinding.profilephoto)
 
+        bindingProfileBinding.logout.setOnClickListener{
+            mGoogleSignInClient.signOut().addOnCompleteListener {
+                Toast.makeText(view.context, "Logging Out", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(view.context, LoginPage::class.java))
+                activity?.finish()
+            }
+        }
+
         
     }
 
