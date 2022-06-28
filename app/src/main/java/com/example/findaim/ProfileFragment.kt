@@ -69,7 +69,9 @@ class ProfileFragment : Fragment() {
             }
         }
 
-        
+        bindingProfileBinding.backbutton.setOnClickListener {
+            findNavController().navigate(R.id.homeFragment)
+        }
     }
 
     override fun onCreateView(
