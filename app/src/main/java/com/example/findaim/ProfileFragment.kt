@@ -1,6 +1,5 @@
 package com.example.findaim
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -55,11 +54,11 @@ class ProfileFragment : Fragment() {
         mGoogleSignInClient = GoogleSignIn.getClient(view.context, gso)
 
         firebaseAuth = FirebaseAuth.getInstance()
-        val currentuser = firebaseAuth.currentUser
+        val currentUser = firebaseAuth.currentUser
 
-        bindingProfileBinding.username.text = currentuser?.displayName
-        bindingProfileBinding.userid.text = currentuser?.email
-        Glide.with(this).load(currentuser?.photoUrl).into(bindingProfileBinding.profilephoto)
+        bindingProfileBinding.username.text = currentUser?.displayName
+        bindingProfileBinding.userid.text = currentUser?.email
+        Glide.with(this).load(currentUser?.photoUrl).into(bindingProfileBinding.profilephoto)
 
         bindingProfileBinding.logout.setOnClickListener{
             mGoogleSignInClient.signOut().addOnCompleteListener {
@@ -77,7 +76,7 @@ class ProfileFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View{
         bindingProfileBinding = FragmentProfileBinding.inflate(inflater,container,false)
         // Inflate the layout for this fragment
         return bindingProfileBinding.root
