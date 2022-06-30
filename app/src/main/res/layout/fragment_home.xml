@@ -16,13 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="10dp"
-            android:background="@color/backgroundcolor"
-            android:src="@drawable/ic_navigationbutton" />
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:background="@color/backgroundcolor"-->
+<!--            android:src="@drawable/ic_navigationbutton" />-->
 
         <TextView
             android:id="@+id/textView"
@@ -67,7 +67,7 @@
         android:id="@+id/homepage_profilephoto"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="15dp"
         app:cardCornerRadius="500dp"
         android:background="@color/backgroundcolor"
         android:src="@drawable/profileimg"
@@ -95,7 +95,8 @@
     <ScrollView
         android:layout_width="363dp"
         android:layout_height="634dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homepage_profilephoto">
