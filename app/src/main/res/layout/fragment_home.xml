@@ -93,7 +93,7 @@
     </androidx.cardview.widget.CardView>
 
     <ScrollView
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="634dp"
         android:layout_marginTop="10dp"
         android:scrollbars="none"
@@ -102,45 +102,45 @@
         app:layout_constraintTop_toBottomOf="@+id/homepage_profilephoto">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="363dp"
-            android:layout_height="634dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="366dp"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/galdeano"
-                    android:text="Find your favorite Job here"
-                    android:textColor="@color/black"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="24dp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textView2"-->
+<!--                    android:layout_width="366dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/galdeano"-->
+<!--                    android:text="Find your favorite Job here"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="28sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.3"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    tools:layout_editor_absoluteY="24dp" />-->
 
                 <LinearLayout
                     android:id="@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                     tools:layout_editor_absoluteX="77dp">
 
                     <EditText
-                        android:layout_width="300dp"
+                        android:layout_width="330dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/button_bg"
                         android:backgroundTint="@color/white"
@@ -169,9 +169,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/bannercard"
-                android:layout_width="343dp"
-                android:layout_height="217dp"
-                android:layout_marginTop="28dp"
+                android:layout_width="match_parent"
+                android:layout_height="183dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:background="@drawable/ic_box"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -216,13 +217,13 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="32dp"
                     android:layout_marginStart="28dp"
                     android:background="@drawable/button_bg"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/galdeano"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     android:text="Continue to website"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
@@ -231,8 +232,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4"
-                    app:layout_constraintVertical_bias="0.675" />
-
+                    app:layout_constraintVertical_bias="0.523" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
