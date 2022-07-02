@@ -40,4 +40,9 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/blazeorange</item>
     </style>
+
+    <style name="LoginTextInputInnerFieldStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
 </resources>

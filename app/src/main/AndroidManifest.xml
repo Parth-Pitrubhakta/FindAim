@@ -22,7 +22,7 @@
             android:exported="false"
             android:theme="@style/AppTheme.NotFullScreen" />
         <activity
-            android:name=".splashscreen"
+            android:name=".Splashscreen"
             android:exported="true"
             android:theme="@style/AppTheme.NotFullScreen2" >
             <intent-filter>
