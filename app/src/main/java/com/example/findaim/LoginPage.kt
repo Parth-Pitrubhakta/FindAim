@@ -4,10 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.findaim.databinding.ActivityLoginPageBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -20,31 +19,41 @@ import com.google.firebase.auth.GoogleAuthProvider
 
 class LoginPage : AppCompatActivity() {
 
+    private lateinit var bindingLoginPageBinding: ActivityLoginPageBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var mgoogleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_page)
+        bindingLoginPageBinding = ActivityLoginPageBinding.inflate(layoutInflater)
+        setContentView(bindingLoginPageBinding.root)
 
-        val forgotpassword = findViewById<TextView>(R.id.tb_forgotpassword)
-        val btnregisterhere = findViewById<TextView>(R.id.tb_RegisterHere)
-        val btnlogin = findViewById<Button>(R.id.btn_login)
+        firebaseAuth = FirebaseAuth.getInstance()
 
-        forgotpassword.setOnClickListener {
-            startActivity(Intent(this,ForgotPasswordPage::class.java))
-        }
-
-        btnregisterhere.setOnClickListener {
+        bindingLoginPageBinding.tbRegisterHere.setOnClickListener {
             startActivity(Intent(this,RegisterPage::class.java))
             finish()
         }
 
-        btnlogin.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
-        }
+        bindingLoginPageBinding.btnLogin.setOnClickListener {
+            val email = bindingLoginPageBinding.ETemailLoginpage.text.toString()
+            val pass = bindingLoginPageBinding.etpasswordLoginpage.text.toString()
 
+            if (email.isNotEmpty() && pass.isNotEmpty()) {
+
+                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } else {
+                Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         FirebaseApp.initializeApp(this)
 
@@ -100,6 +109,7 @@ class LoginPage : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
         if (GoogleSignIn.getLastSignedInAccount(this) != null) {
             startActivity(
                 Intent(
@@ -109,5 +119,8 @@ class LoginPage : AppCompatActivity() {
             )
             finish()
         }
+
+
+
     }
 }

@@ -22,12 +22,16 @@
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/drawable-v24/button_bg.xml" value="0.1605" />
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/drawable-v24/email_logo.xml" value="0.1605" />
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/drawable/ic_box.xml" value="0.1605" />
+        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/drawable/ic_navigationbutton.xml" value="0.217" />
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/drawable/round_button.xml" value="0.1605" />
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/activity_login_page.xml" value="0.23229166666666667" />
+        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/activity_register_page.xml" value="0.264" />
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/activity_splashscreen.xml" value="0.23229166666666667" />
-        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/fragment_home.xml" value="0.2" />
-        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/layout/round_button.xml" value="0.23229166666666667" />
+        <entry key="..\:/Parth/Learning/Android Development Using Kotlin/FindAim/app/src/main/res/menu/bottom_nav.xml" value="0.23229166666666667" />
       </map>
     </option>
   </component>

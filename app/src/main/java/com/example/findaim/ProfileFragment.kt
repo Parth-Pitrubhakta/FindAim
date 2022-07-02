@@ -61,6 +61,7 @@ class ProfileFragment : Fragment() {
         Glide.with(this).load(currentUser?.photoUrl).into(bindingProfileBinding.profilephoto)
 
         bindingProfileBinding.logout.setOnClickListener{
+            firebaseAuth.signOut()
             mGoogleSignInClient.signOut().addOnCompleteListener {
                 Toast.makeText(view.context, "Logging Out", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(view.context, LoginPage::class.java))

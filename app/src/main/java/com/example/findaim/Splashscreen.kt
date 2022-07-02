@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.ImageView
 import com.google.firebase.auth.FirebaseAuth
 
-class splashscreen : AppCompatActivity() {
+class Splashscreen : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
