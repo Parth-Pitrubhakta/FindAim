@@ -1,5 +1,7 @@
 package com.example.findaim
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -49,6 +51,12 @@ class HomeFragment : Fragment() {
 
         bindingHomeBinding.IbHomepageprofilephoto.setOnClickListener{
             findNavController().navigate(R.id.profileFragment)
+        }
+
+        bindingHomeBinding.btnGotowebsite.setOnClickListener {
+
+            val intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://find-aim.com//"))
+            startActivity(intent)
         }
 
     }
