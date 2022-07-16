@@ -2,5 +2,6 @@
     <string name="app_name">FindAim</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="userid">@parth_pitrubhakta</string>
+
+    <string name="website">"https://find-aim.com//"</string>
 </resources>

@@ -197,6 +197,7 @@
                     android:layout_height="32dp"
                     android:layout_marginStart="28dp"
                     android:background="@drawable/button_bg"
+                    android:onClick="@{() -> teamFragment.openLink(@string/website)}"
                     android:backgroundTint="@color/white"
                     android:fontFamily="@font/galdeano"
                     android:padding="5dp"
