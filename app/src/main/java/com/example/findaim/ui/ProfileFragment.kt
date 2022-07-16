@@ -39,7 +39,7 @@ class ProfileFragment : Fragment() {
 
         bindingProfileBinding.username.text = currentUser?.displayName
         bindingProfileBinding.userid.text = currentUser?.email
-        Glide.with(this).load(currentUser?.photoUrl).into(bindingProfileBinding.profilephoto)
+        Glide.with(this).load(currentUser?.photoUrl).centerCrop().into(bindingProfileBinding.profilePhoto)
 
         bindingProfileBinding.logout.setOnClickListener{
             firebaseAuth.signOut()
