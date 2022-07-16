@@ -8,8 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.findaim.R
+import com.example.findaim.adapter.ImagesAdapter
+import com.example.findaim.data.Imagedata
 import com.example.findaim.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -36,6 +39,18 @@ class HomeFragment : Fragment() {
             homeFragment =this@HomeFragment
         }
 
+        val data1 = arrayListOf<Imagedata>()
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+        data1.add(Imagedata(R.drawable.imagejob))
+
+        binding!!.recyclerView.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+        binding!!.recyclerView.adapter = ImagesAdapter(data1)
 
         firebaseAuth = FirebaseAuth.getInstance()
         val currentUser = firebaseAuth.currentUser
