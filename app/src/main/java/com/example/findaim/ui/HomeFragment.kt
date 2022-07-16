@@ -1,4 +1,4 @@
-package com.example.findaim
+package com.example.findaim.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.findaim.R
 import com.example.findaim.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -31,6 +32,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding?.apply {
+            homeFragment =this@HomeFragment
+        }
+
 
         firebaseAuth = FirebaseAuth.getInstance()
         val currentUser = firebaseAuth.currentUser
@@ -41,11 +46,6 @@ class HomeFragment : Fragment() {
 
         binding!!.IbHomepageprofilephoto.setOnClickListener{
             findNavController().navigate(R.id.profileFragment)
-        }
-
-        binding!!.btnGotowebsite.setOnClickListener {
-            val intent= Intent(Intent.ACTION_VIEW, Uri.parse("https://find-aim.com//"))
-            startActivity(intent)
         }
 
     }
