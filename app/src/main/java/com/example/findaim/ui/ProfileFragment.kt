@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.findaim.LoginPage
 import com.example.findaim.R
 import com.example.findaim.databinding.FragmentProfileBinding
@@ -39,7 +40,12 @@ class ProfileFragment : Fragment() {
 
         bindingProfileBinding.username.text = currentUser?.displayName
         bindingProfileBinding.userid.text = currentUser?.email
-        Glide.with(this).load(currentUser?.photoUrl).centerCrop().into(bindingProfileBinding.profilePhoto)
+
+        Glide
+            .with(this)
+            .load(currentUser?.photoUrl)
+            .centerInside()
+            .into(bindingProfileBinding.profilePhoto)
 
         bindingProfileBinding.logout.setOnClickListener{
             firebaseAuth.signOut()
