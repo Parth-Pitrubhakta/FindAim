@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindAim" >
         <activity
-            android:name=".ForgotPasswordPage"
-            android:exported="false"
-            android:theme="@style/AppTheme.NotFullScreen" />
-        <activity
             android:name=".RegisterPage"
             android:exported="false"
             android:theme="@style/AppTheme.NotFullScreen" />
