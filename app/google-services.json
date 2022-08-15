@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "1063860956221",
-    "project_id": "findaim",
-    "storage_bucket": "findaim.appspot.com"
+    "project_number": "155948348498",
+    "project_id": "find-aim",
+    "storage_bucket": "find-aim.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1063860956221:android:2a022277a94b0bc8230e54",
+        "mobilesdk_app_id": "1:155948348498:android:974af354814c4a7c209b8b",
         "android_client_info": {
           "package_name": "com.example.findaim"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1063860956221-s6sdcvcjigehdm9n967baqrd95jt0g5d.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.findaim",
-            "certificate_hash": "442dbadc5467f20576ed2e8bce43f20f3820d0ee"
-          }
-        },
-        {
-          "client_id": "1063860956221-8b0lvr3qqncsea7mfaak7v60da4pd7f7.apps.googleusercontent.com",
+          "client_id": "155948348498-2u74riq6gadk63dv1gkjiule5ternjpg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCdRY2Uma2pVCH5x2FjSQLvh6NmPla3MB8"
+          "current_key": "AIzaSyDIuQVRB1mmgwcOcsWYBP1XWDNpKyveb0o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1063860956221-8b0lvr3qqncsea7mfaak7v60da4pd7f7.apps.googleusercontent.com",
+              "client_id": "155948348498-2u74riq6gadk63dv1gkjiule5ternjpg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
