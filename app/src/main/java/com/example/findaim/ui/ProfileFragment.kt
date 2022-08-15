@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.example.findaim.LoginPage
+import com.example.findaim.activities.LoginPage
 import com.example.findaim.R
 import com.example.findaim.databinding.FragmentProfileBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn

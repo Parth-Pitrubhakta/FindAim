@@ -1,10 +1,11 @@
-package com.example.findaim
+package com.example.findaim.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.findaim.R
 import com.example.findaim.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
