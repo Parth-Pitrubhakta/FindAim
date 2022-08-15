@@ -6,14 +6,14 @@
     <data>
         <variable
             name="registerAcitivity"
-            type="com.example.findaim.RegisterPage" />
+            type="com.example.findaim.activities.RegisterPage" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".RegisterPage">
+        tools:context=".activities.RegisterPage">
 
         <ImageView
             android:id="@+id/imageView"

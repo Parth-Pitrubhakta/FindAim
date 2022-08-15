@@ -1,4 +1,4 @@
-package com.example.findaim
+package com.example.findaim.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.findaim.R
 import com.example.findaim.databinding.ActivityLoginPageBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -31,7 +32,7 @@ class LoginPage : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         bindingLoginPageBinding.tbRegisterHere.setOnClickListener {
-            startActivity(Intent(this,RegisterPage::class.java))
+            startActivity(Intent(this, RegisterPage::class.java))
             finish()
         }
 

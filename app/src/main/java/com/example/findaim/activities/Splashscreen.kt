@@ -1,10 +1,11 @@
-package com.example.findaim
+package com.example.findaim.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.findaim.R
 import com.google.firebase.auth.FirebaseAuth
 
 class Splashscreen : AppCompatActivity() {
@@ -22,7 +23,7 @@ class Splashscreen : AppCompatActivity() {
             /** If user is not authenticated, send him to signInPage to authenticate first.
              * else send him to HomePage */
             if (user != null){
-                val homepageintent = Intent(this,MainActivity::class.java)
+                val homepageintent = Intent(this, MainActivity::class.java)
                 startActivity(homepageintent)
                 finish()
             }else{

@@ -6,14 +6,14 @@
     <data>
         <variable
             name="loginAcivity"
-            type="com.example.findaim.LoginPage" />
+            type="com.example.findaim.activities.LoginPage" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".LoginPage">
+        tools:context=".activities.LoginPage">
 
         <ImageView
             android:id="@+id/imageView"

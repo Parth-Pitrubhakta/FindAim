@@ -1,4 +1,4 @@
-package com.example.findaim
+package com.example.findaim.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -45,7 +45,7 @@ class RegisterPage : AppCompatActivity() {
         }
 
         bindingRegisterPageBinding.tbLoginHere.setOnClickListener {
-            startActivity(Intent(this,LoginPage::class.java))
+            startActivity(Intent(this, LoginPage::class.java))
             finish()
         }
     }

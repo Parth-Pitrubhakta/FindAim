@@ -6,14 +6,14 @@
     <data>
         <variable
             name="splashScreen"
-            type="com.example.findaim.Splashscreen" />
+            type="com.example.findaim.activities.Splashscreen" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/ic_welcome_screen"
-        tools:context=".Splashscreen">
+        tools:context=".activities.Splashscreen">
 
         <ImageView
             android:id="@+id/imageView2"
